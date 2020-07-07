@@ -1,0 +1,334 @@
+
+body {
+  font-family: "Lato", sans-serif;
+}
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 13px 20px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.home {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.anchor {
+  display: block;
+  position: relative;
+  top: -70px;
+  visibility: hidden;
+}
+/*JUMBOTRON*/
+.jumbotron {
+  height: 100vh; /*height to 100% of view height*/
+  background: #00FF00; /*background color to blue*/
+  margin-bottom: 0; /*no bottom margin*/
+
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron-text {
+  /*TAGLINE UNDER NAME*/
+  font-weight: 400;
+  font-size: 2em;
+  color: white;
+  text-align: center;
+  padding-top: 150px;
+  padding-left: 100px;
+}
+
+.jumbotron-text h1 {
+  /*YOUR NAME*/
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 3em;
+  margin-bottom: 0;
+  padding-left: 180px
+}
+
+.jumbotron-text p {
+  margin: 0;
+  padding-left: 150px
+}
+/*SOCIAL LINKS*/
+.ul-social {
+  text-align: center;
+  padding-left: 0;
+  margin-left: 180px;
+}
+
+.li-social-links {
+  display: inline-block;
+  list-style: none;
+}
+
+.social {
+  font-size: 2em;
+  color: white;
+  padding: 20px;
+
+}
+
+/*ARROW LINK*/
+#down-arrow {
+  
+  margin-top: auto;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-left:200px
+}
+.footer{
+	margin-left: 240px;
+}
+
+#down-arrow a {
+  color: red;
+}
+
+.container {
+  /*sets up flexbox*/
+  background-color: #31b0d5;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+
+
+}
+
+/*Sticky Notes*/
+.sticky {
+  display: flex;
+  flex-direction: column;
+  background-color:#FFFACD;
+  border: rgba(0,0,0,.125);
+  border-radius: .25rem;
+  margin-bottom: 30px;
+  margin-left: 200px;
+  font-family:arial,sans-serif;
+  
+ 
+}
+.ul-sticky .li-sticky h2,p{
+  font-size:100%;
+  font-weight:normal;
+}
+.ul-sticky,.li-sticky{
+  list-style:none;
+}
+.ul-sticky{
+  overflow:hidden;
+  *padding:3rem;
+}
+.ul-sticky .li-sticky a{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:20rem;
+  width:15rem;
+  padding:1rem;
+}
+.ul-sticky .li-sticky{
+  margin:1rem;
+  float:left;
+}
+/*padding to headlines in sticky*/
+.ul-sticky .li-sticky h2{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+.ul-sticky .li-sticky p{
+  font-family:"Reenie Beanie",arial,sans-serif;
+  font-size:180%;
+}
+/*Sticky box shadow*/
+.ul-sticky .li-sticky a{
+  text-decoration:none;
+  color:#000;
+  background:#ffc;
+  display:block;
+  height:20rem;
+  width:10rem;
+  padding:1rem;
+  /* Firefox */
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  /* Safari+Chrome */
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  /* Opera */
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+}
+/*Tilting sticky notes*/
+.ul-sticky .li-sticky a{
+  -webkit-transform:rotate(-6deg);
+  -o-transform:rotate(-6deg);
+  -moz-transform:rotate(-6deg);
+}
+.ul-sticky .li-sticky:nth-child(even) a{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+}
+.ul-sticky .li-sticky:nth-child(3n) a{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+}
+
+/*Zooming sticky Notes*/
+.ul-sticky .li-sticky a:hover,.ul-sticky .li-sticky a:focus{
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+/*Adding transitions and color to sticky*/
+.ul-sticky .li-sticky a{
+  text-decoration:none;
+  color:#000;
+  background:#ccf;
+  display:block;
+  height:20rem;
+  width:15rem;
+  padding:2rem;
+  
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+.ul-sticky .li-sticky:nth-child(even) a{
+  -o-transform:rotate(4deg);
+  -webkit-transform:rotate(4deg);
+  -moz-transform:rotate(4deg);
+  position:relative;
+  top:5px;
+  background:#FFDAB9;
+
+}
+.ul-sticky .li-sticky:nth-child(3n) a{
+  -o-transform:rotate(-3deg);
+  -webkit-transform:rotate(-3deg);
+  -moz-transform:rotate(-3deg);
+  position:relative;
+  top:-5px;
+  background:#ccf;
+}
+/*Skills*/
+
+ h2 {
+  font-weight: 200;
+  font-size: 2rem;
+  /*color: #31b0d5;*/
+  text-transform: uppercase;
+  text-align: center;
+}
+/*Projects*/
+.project-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #FFFACD;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-left: 200px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.project-content {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+h4 {
+  margin: 0;
+  font-weight: 400;
+  color: #696969;
+}
+
+/*Skill box*/
+.flex-container {
+  display: flex;
+  background-color:green;
+  margin-left:420px;
+  margin-right: 400px;
+  
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-size: 24px;
+  margin: 10px;
+}
+
+.ul-strengths{
+	margin-top: 3.5em;
+}
+.li-stren{
+	padding: 3px;
+	font-size: 20px;
+	font-color: #FFFFFF;
+}
+/*contact*/
+.blue {
+  background: 	#008080;
+  
+}
+.contact-box{
+	
+  width: 480px;
+  border: 3px solid maroon;
+  padding: 15px;
+  margin-left: 420px;
+}
+.white-text {
+  color: white;
+}
+.ul-contact{
+	text-decoration: none;
+	text-size: 20px;
+	padding: 6px;
+	margin: 5px;
+}
+.li-contact{
+	padding: 4px;
+}
